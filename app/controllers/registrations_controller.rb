@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   
-  before_action :hide_from_unauthenticated, :except => [:sign_in]
+  # before_action :hide_from_unauthenticated, :except => [:sign_in]
   
   private
  
