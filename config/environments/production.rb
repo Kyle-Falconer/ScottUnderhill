@@ -18,6 +18,10 @@ Rails.application.configure do
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
+  
+  # If you are deploying on Heroku with Rails 3.2 only, forcing your application to not access the DB
+  # or load models when precompiling your assets.
+  config.assets.initialize_on_precompile = false
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
