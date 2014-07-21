@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Scott Underhill</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'html5shiv-printshiv' %>
+  <![endif]-->
+</head>
+<body>
+	
+  <header class="pure-g-r">
+	  <%= masthead_logo %>
+
+	  <% if user_signed_in? %>
+	  <nav id="user_controls" class="pure-u-1">
+	  	<p>Signed in as <%= current_user.name %>.</p>
+	  	<ul>
+	  		<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
+	  	</ul>
+  	  </nav>
+	  <% end %>
+
+	  <% if flash[:notice] %>
+	  <div class="notice pure-u-1"><%= flash[:notice] %></div>
+	  <% end %>
+  </header>
+
+  <%= yield %>
+
+
+	  
+</body>
+</html>
