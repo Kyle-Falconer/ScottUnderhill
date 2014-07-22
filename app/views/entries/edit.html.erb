@@ -5,6 +5,7 @@
 
 <%= link_to 'Show', @entry %> |
 <%= link_to 'Back', entries_path %>
+<%= link_to 'Delete', @entry, method: :delete, data: { confirm: 'This will delete the blog entry. Are you sure you want to do that?' } %>
 
 
 <%= render 'form' %>

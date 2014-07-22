@@ -1,7 +1,7 @@
-<%= form_for(@entry) do |f| %>
+<%= form_for @entry, html: {class: "pure-form"} do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+      <h2><%= pluralize(@entry.errors.count, "error") %> prevented this entry from being saved:</h2>
 
       <ul>
       <% @entry.errors.full_messages.each do |message| %>
@@ -11,19 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.number_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
+  <%= f.hidden_field( :author, :value => current_user.id) %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+  <div class="field">
+	<%= f.label :content %><br>
+	<%= f.cktext_area :content, :class => 'ckeditor', :ckeditor => { :toolbar => 'mini'} %>
+	
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "pure-button" %>
   </div>
 <% end %>

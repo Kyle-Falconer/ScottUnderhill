@@ -4,7 +4,8 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    # @entries = Entry.all
+    @entries = Entry.all.order('created_at DESC')
   end
 
   # GET /entries/1
@@ -15,6 +16,7 @@ class EntriesController < ApplicationController
   # GET /entries/new
   def new
     hide_from_unauthenticated
+    params[:author] = current_user
     @entry = Entry.new
   end
 
@@ -28,6 +30,7 @@ class EntriesController < ApplicationController
   def create
     hide_from_unauthenticated
     @entry = Entry.new(entry_params)
+    params[:author] = current_user
 
     respond_to do |format|
       if @entry.save
