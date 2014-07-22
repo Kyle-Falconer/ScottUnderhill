@@ -21,7 +21,9 @@ Rails.application.configure do
   
   # If you are deploying on Heroku with Rails 3.2 only, forcing your application to not access the DB
   # or load models when precompiling your assets.
-  config.assets.initialize_on_precompile = false
+  # this is also acheived through the use of the gem:
+  # in the gem file: 'rails_12factor', group: :production
+  # config.assets.initialize_on_precompile = false
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
