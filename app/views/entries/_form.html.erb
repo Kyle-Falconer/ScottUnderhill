@@ -1,4 +1,5 @@
-<%= form_for @entry, html: {class: "pure-form", 'data-no-turbolink' => 'true'} do |f| %>
+<div data-no-turbolink>
+<%= form_for @entry, html: {class: "pure-form"} do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@entry.errors.count, "error") %> prevented this entry from being saved:</h2>
@@ -25,3 +26,5 @@
     <%= f.submit :class => "pure-button" %>
   </div>
 <% end %>
+
+</div>

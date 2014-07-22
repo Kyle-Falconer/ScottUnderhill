@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Scott Underhill</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
   <!--[if lt IE 9]>
@@ -18,7 +18,9 @@
 	  <nav id="user_controls" class="pure-u-1">
 	  	<p>Signed in as <%= current_user.name %>.</p>
 	  	<ul>
-	  		<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
+			<li><%= link_to 'New Entry', new_entry_path, :class => "pure-button" %></li>
+			<li><%= link_to "Admin", destroy_user_session_path, :method => :delete, :class => "pure-button"  %></li>
+	  		<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "pure-button"  %></li>
 	  	</ul>
   	  </nav>
 	  <% end %>

@@ -1,17 +1,12 @@
 <header class="pure-g-r">
 	<h1 class="pure-u-1">Listing entries</h1>
-	<% if user_signed_in? %>
-	<nav class="pure-u-1">
-		<%= link_to 'New Entry', new_entry_path, {:class => "pure-button"} %>
-	<nav>
-	<% end %>
 </header>
 <article class="pure-g-r">
 	<% @entries.each do |entry| %>
 	<section class="pure-u-4-5">
 		<h2><%= link_to entry.title, entry %></h2>
 		<time datetime="<%= entry.created_at.to_formatted_s(:unambiguous) %>"><%= entry.created_at.to_formatted_s(:short_date_only) %></time>
-		<%= entry.content.html_safe %>
+		<%= entry.content.html_safe.split[0..50].join(" ") %>&hellip;<%= link_to "continue", entry %>
 	</section>
 	<% end %>
 	
