@@ -1,8 +1,10 @@
 <header class="pure-g-r">
 	<h1 class="pure-u-1">Listing entries</h1>
+	<% if user_signed_in? %>
 	<nav class="pure-u-1">
 		<%= link_to 'New Entry', new_entry_path, {:class => "pure-button"} %>
 	<nav>
+	<% end %>
 </header>
 <article class="pure-g-r">
 	<% @entries.each do |entry| %>
