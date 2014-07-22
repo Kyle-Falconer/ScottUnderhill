@@ -16,7 +16,10 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 # https://github.com/galetahub/ckeditor
-gem 'ckeditor'
+# gem 'ckeditor'
+
+# https://github.com/tsechingho/ckeditor-rails
+gem 'ckeditor_rails'
 
 #user authentication
 gem 'devise'
