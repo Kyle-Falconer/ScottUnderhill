@@ -1,22 +1,26 @@
+
 <article class="pure-g-r">
 	<section class="pure-u-1">
+		
 <p id="notice"><%= notice %></p>
-<p>
-  <strong>Title:</strong>
+
+<hgroup>
+	<% if user_signed_in? %>
+		<%= link_to 'Edit', edit_entry_path(@entry), :class => "pure-button" %>
+	<% end %>
+<h2>
   <%= @entry.title %>
-</p>
+</h2>
 <p>
   <strong>Author:</strong>
   <%= User.find(@entry.author).name %>
 </p>
 
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @entry.content.html_safe %>
-</p>
+</hgroup>
+
+<%= @entry.content.html_safe %>
+
 
 
 
