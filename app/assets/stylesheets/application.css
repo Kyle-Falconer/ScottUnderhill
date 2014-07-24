@@ -21,15 +21,23 @@ img{vertical-align: top;}
 html, body {height:100%; width:100%;}
 img, li {display:inline-block;}
 
+a:hover{background-color:transparent;color:#3c3c3c;}
+
 time{display:block;}
-aside.pure-u-1-5 {float:right}
+
 /*
 header {display:block;overflow:hidden;}
 header>nav>ul {list-style:none;}
 header>nav>ul>li {float:left; margin-left:10px; margin-right:10px;}
 header>nav>ul>li a, header>nav>ul>li a:visited {color:#0099CC; text-decoration:none;}
 */
-body>header, body>article, body>footer, body>section{max-width: 1000px;margin-left: auto;margin-right: auto;}
+body>header, body>article, body>footer, body>section{max-width: 1000px;margin-left: auto;margin-right: auto;position:relative;}
+body>*:last-child{padding-bottom: 60px;}
+article>section+aside{position:absolute;float:right;top:20px; padding:20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
+.SiteLogo img{position:relative; top:40px;}
 
 #user_controls ul{float:right;}
+#user_controls p{text-align: right;}
+
+.entry {margin-bottom:40px;}

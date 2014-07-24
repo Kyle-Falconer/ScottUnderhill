@@ -1,4 +1,4 @@
-<div data-no-turbolink>
+<div>
 <%= form_for @entry, html: {class: "pure-form"} do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
@@ -15,7 +15,7 @@
   <%= f.hidden_field( :author, :value => current_user.id) %>
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "pure-input-1-2"%>
   </div>
   <div class="field">
 	<%= f.label :content %><br>
