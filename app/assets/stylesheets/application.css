@@ -35,6 +35,7 @@ body>header, body>article, body>footer, body>section{max-width: 1000px;margin-le
 body>*:last-child{padding-bottom: 60px;}
 article>section+aside{position:absolute;float:right;top:20px; padding:20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
+.SiteLogo {height: 160px;}
 .SiteLogo img{position:relative; top:40px;}
 
 #user_controls ul{float:right;}
