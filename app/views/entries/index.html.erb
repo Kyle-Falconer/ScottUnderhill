@@ -6,7 +6,8 @@
 	<section class="pure-u-4-5">
 		<h2><%= link_to entry.title, entry %></h2>
 		<time datetime="<%= entry.created_at.to_formatted_s(:unambiguous) %>"><%= entry.created_at.to_formatted_s(:short_date_only) %></time>
-		<%= entry.content.html_safe.split[0..50].join(" ") %>&hellip;<%= link_to "continue", entry %>
+		<%= ActionView::Base.full_sanitizer.sanitize(Entry.last.content, :tags=>[]).split[0..50].join(' ') %>&hellip;<%= link_to "continue", entry %>
+		
 	</section>
 	<% end %>
 	
