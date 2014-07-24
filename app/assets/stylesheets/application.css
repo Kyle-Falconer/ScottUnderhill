@@ -35,6 +35,8 @@ body>header, body>article, body>footer, body>section{max-width: 1000px;margin-le
 body>footer{padding-top: 60px;padding-bottom:40px;}
 article>section+aside{position:absolute;float:right;top:20px; padding:20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
+article p, section p {margin-bottom:10px;}
+
 .SiteLogo {height: 160px;}
 .SiteLogo img{position:relative; top:40px;}
 
