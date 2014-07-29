@@ -17,31 +17,32 @@
 		
 	</section>
 	<% end %>
-	
+	<!--
 	<aside class="pure-u-1-3">
 		<table>
 			<thead>
 				<tr>
-					<!-- <th>Author</th>
-		      		<th>Content</th> -->
+					<th>Author</th>
+		      		<th>Content</th>
 		      		<th>Title</th>
 					<th>Date Posted</th>
-					<!-- ><th colspan="3">Actions</th> -->
+					<th colspan="3">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
 		    	<% @entries.each do |entry| %>
 		      	<tr>
-		        	<!-- <td><%= entry.author %></td>
-		        	<td><%= entry.content %></td> -->
+					<td><%= entry.author %></td>
+		        	<td><%= entry.content %></td>
 		        	<td><%= link_to entry.title, entry %></td>
 					<td><%= entry.created_at.to_formatted_s(:short_date_only) %></td>
-		        	<!--<td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-		        	<td><%= link_to 'Delete', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+		        	<td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+		        	<td><%= link_to 'Delete', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				</tr>
 				<% end %>
 			</tbody>
 		</table>
 	</aside>
+	-->
 	
 </article>
