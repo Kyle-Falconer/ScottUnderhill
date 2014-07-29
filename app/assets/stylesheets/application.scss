@@ -37,6 +37,10 @@ article>section+aside{position:absolute;float:right;top:20px; padding:20px; -moz
 
 article p, section p {margin-bottom:10px;}
 
+.alert, .notice {font-size: 1.4em;font-weight: bold;background-color: #333333;padding: 5px;}
+.notice {color: #33d933;}
+.alert {color: #d93333;}
+
 .Masthead+article{margin-top:20px;}
 
 .Masthead {display: block;padding-top: 20px;width: 100%;max-width:100%;background: transparent url(image_path('beach_wide.jpg')) no-repeat center -150px;}
