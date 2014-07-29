@@ -14,7 +14,7 @@
 	
 	<header class="pure-g-r Masthead">
 		<div class="MastheadInnerWrapper pure-u-1">
-			<img src="/assets/Scott-hat.png" alt="" class="MastheadImage"/>
+			<%= image_tag("Scott-hat.png", :alt => "Scott Underhill", :class => "MastheadImage")  %>
 			<%= masthead_logo %>
 			<!-- <span class="title pure-u-1"><%= link_to "The Scott Underhill Blog", root_path %></span> -->
 			<% if user_signed_in? %>
