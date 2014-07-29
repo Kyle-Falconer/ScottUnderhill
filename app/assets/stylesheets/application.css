@@ -11,8 +11,8 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
  *= require purecss
+ *= require_self
  */
 
 
@@ -37,10 +37,22 @@ article>section+aside{position:absolute;float:right;top:20px; padding:20px; -moz
 
 article p, section p {margin-bottom:10px;}
 
-.SiteLogo {height: 160px;}
-.SiteLogo img{position:relative; top:40px;}
+.Masthead+article{margin-top:20px;}
 
-#user_controls ul{float:right;}
-#user_controls p{text-align: right;}
+.Masthead {display: block;padding-top: 20px;width: 100%;max-width:100%;background: transparent url(/assets/beach_wide.jpg) no-repeat -40px -150px;}
+.MastheadInnerWrapper {display: block;
+    height: 130px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;}
+.pure-g-r img.MastheadImage {height:130px; display:inline-block;float:left;}
+.SiteLogo {float: right;
+position: absolute;
+top: 80px;
+right: 30px;}
+.SiteLogo img{position: relative;float: right;}
+
+#user_controls ul{float:right; margin-top:5px;}
+#user_controls p{text-align: right;color:#ffffff;font-size:1.2em;text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);}
 
 .entry {margin-bottom:40px;}

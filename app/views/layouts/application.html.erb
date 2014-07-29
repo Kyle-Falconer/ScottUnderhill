@@ -12,23 +12,26 @@
 </head>
 <body>
 	
-	<header class="pure-g-r">
-		<%= masthead_logo %>
-		<!-- <span class="title pure-u-1"><%= link_to "The Scott Underhill Blog", root_path %></span> -->
-		<% if user_signed_in? %>
-		<nav id="user_controls" class="pure-u-1">
-			<p>Signed in as <%= current_user.name %>.</p>
-			<ul>
-				<li><%= link_to 'New Entry', new_entry_path, :class => "pure-button" %></li>
-				<!-- <li><%= link_to "Admin", destroy_user_session_path, :method => :delete, :class => "pure-button"  %></li> -->
-				<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "pure-button"  %></li>
-			</ul>
-		</nav>
-		<% end %>
-		<% if flash[:notice] %>
-		<div class="notice pure-u-1"><%= flash[:notice] %></div>
-		<div class="alert pure-u-1"><%= flash[:alert] %></div>
-		<% end %>
+	<header class="pure-g-r Masthead">
+		<div class="MastheadInnerWrapper pure-u-1">
+			<img src="/assets/Scott-hat.png" alt="" class="MastheadImage"/>
+			<%= masthead_logo %>
+			<!-- <span class="title pure-u-1"><%= link_to "The Scott Underhill Blog", root_path %></span> -->
+			<% if user_signed_in? %>
+			<nav id="user_controls">
+				<p>Signed in as <%= current_user.name %>.</p>
+				<ul>
+					<li><%= link_to 'New Entry', new_entry_path, :class => "pure-button" %></li>
+					<!-- <li><%= link_to "Admin", destroy_user_session_path, :method => :delete, :class => "pure-button"  %></li> -->
+					<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "pure-button"  %></li>
+				</ul>
+			</nav>
+			<% end %>
+			<% if flash[:notice] %>
+			<div class="notice"><%= flash[:notice] %></div>
+			<div class="alert"><%= flash[:alert] %></div>
+			<% end %>
+		</div>
 	</header>
 
 	<%= yield %>
