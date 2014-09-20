@@ -13,8 +13,7 @@
 	<section class="pure-u-2-3">
 		<h2><%= link_to entry.title, entry %></h2>
 		<time datetime="<%= entry.created_at.to_formatted_s(:unambiguous) %>"><%= entry.created_at.to_formatted_s(:short_date_only) %></time>
-		<%= ActionView::Base.full_sanitizer.sanitize(Entry.last.content, :tags=>[]).split[0..50].join(' ') %>&hellip;<%= link_to "continue", entry %>
-		
+		<p><%= HTMLEntities.new.decode ActionView::Base.full_sanitizer.sanitize(entry.content, :tags=>[]).split[0..50].join(' ') %>&hellip;<%= link_to "continue", entry %></p>		
 	</section>
 	<% end %>
 	<!--
@@ -45,6 +44,6 @@
 	</aside>
 	-->
 	<aside class="pure-u-1-3">
-		<iframe src="http://www.youcaring.com/fundraiser-widget.aspx?frid=202575" width="260" height="398" frameborder="0"></iframe>
+		<iframe src="http://www.youcaring.com/fundraiser-widget.aspx?frid=202575" width="260" height="398" style="border:none"></iframe>
 	</aside>
 </article>
