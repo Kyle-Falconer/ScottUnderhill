@@ -7,14 +7,16 @@
 		<p>Additional information and comments are available on the <a href="http://hsblifeguards.com/category/scott/" target="_blank">Huntington State Beach Lifeguard Association's website</a>. Both Scott and Sylvia thank you for your concern and prayers!</p>
 	</section>
 </article>
-<article class="pure-g-r">
+<section class="pure-g-r">
 	
 	<% @entries.each do |entry| %>
-	<section class="pure-u-2-3">
-		<h2><%= link_to entry.title, entry %></h2>
-		<time datetime="<%= entry.created_at.to_formatted_s(:unambiguous) %>"><%= entry.created_at.to_formatted_s(:short_date_only) %></time>
-		<p><%= HTMLEntities.new.decode ActionView::Base.full_sanitizer.sanitize(entry.content, :tags=>[]).split[0..50].join(' ') %>&hellip;<%= link_to "continue", entry %></p>		
-	</section>
+	<article class="pure-u-2-3">
+		<section>
+			<h2><%= link_to entry.title, entry %></h2>
+			<time datetime="<%= entry.created_at.to_formatted_s(:unambiguous) %>"><%= entry.created_at.to_formatted_s(:short_date_only) %></time>
+			<p><%= HTMLEntities.new.decode ActionView::Base.full_sanitizer.sanitize(entry.content, :tags=>[]).split[0..50].join(' ') %>&hellip;<%= link_to "continue", entry %></p>		
+		</section>
+	</article>
 	<% end %>
 	<!--
 	<aside class="pure-u-1-3">
@@ -46,4 +48,4 @@
 	<aside class="pure-u-1-3">
 		<iframe src="http://www.youcaring.com/fundraiser-widget.aspx?frid=202575" width="260" height="398" style="border:none"></iframe>
 	</aside>
-</article>
+</section>

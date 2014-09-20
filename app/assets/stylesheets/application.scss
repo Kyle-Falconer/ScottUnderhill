@@ -34,7 +34,7 @@ header>nav>ul>li a, header>nav>ul>li a:visited {color:#0099CC; text-decoration:n
 */
 body>header, body>article, body>footer, body>section{max-width: 1000px;margin-left: auto;margin-right: auto;position:relative;}
 body>footer{padding-top: 60px;padding-bottom:40px;}
-article>section+aside{position:absolute;float:right;top:20px; padding:20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+section>article+aside{position:absolute;right:0;top:20px; padding:20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
 article p, section p {margin-bottom:10px;}
 
@@ -45,19 +45,16 @@ article p, section p {margin-bottom:10px;}
 .Masthead+article{margin-top:20px;}
 
 .Masthead {display: block;padding-top: 20px;width: 100%;max-width:100%;background: transparent url(image_path('beach_wide.jpg')) no-repeat center -150px;}
-.MastheadInnerWrapper {display: block;
-    height: 130px;
-    margin: 0 auto;
-    max-width: 1000px;
-    position: relative;}
+.MastheadInnerWrapper {display: block; height: 130px; margin: 0 auto;max-width: 1000px;position: relative;}
 .pure-g-r img.MastheadImage {height:130px; display:inline-block;float:left;}
-.SiteLogo {float: right;
-position: absolute;
-top: 80px;
-right: 30px;}
+.SiteLogo {float: right;position: absolute;top: 80px;right: 30px;}
 .SiteLogo img{position: relative;float: right;}
 
 #user_controls ul{float:right; margin-top:5px;}
 #user_controls p{text-align: right;color:#ffffff;font-size:1.2em;text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);}
 
 .entry {margin-bottom:40px;}
+
+/** HACK **/
+.pure-u-2-3 {width:66%;}
+.pure-u-1-3 {width:33%;}
