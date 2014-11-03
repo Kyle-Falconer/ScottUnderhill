@@ -1,6 +1,6 @@
-<article class="pure-g-r">	
+<article class="pure-g-r">
 	<section class="pure-u-1">
-		<p>Early in July, Scott Underhill was injured in a body-surfing accident at Newport Beach on a big surf day. Two lifeguards and an ER doctor from Hoag Hospital were on the beach that day when the accident happened, and were able to respond immediately and resuscitate Scott after he was pulled from the surf. Scott broke his C2 and C7 vertebra in the accident; and doesn’t remember the accident at this point, but most consider it a miracle that the emergency response personnel on hand (typically, it's one lifeguard in a tower) were so well qualified to address the situation and save Scott’s life.</p>
+		<p>Early in July, Scott Underhill was injured in a body-surfing accident at Newport Beach on a big surf day. Two lifeguards and a vacationing ER doctor were on the beach that day when the accident happened, and were able to respond immediately and resuscitate Scott after he was pulled from the surf. Scott broke his C2 and C7 vertebra in the accident; and doesn’t remember the accident at this point, but most consider it a miracle that the emergency response personnel on hand (typically, it's one lifeguard in a tower) were so well qualified to address the situation and save Scott’s life.</p>
 
 		<p>Scott has spent most of his life in the water, and has served as lifeguard on Orange County beaches for almost forty years. He has a legion of friends and colleagues, and this page has been set up to allow Scott's wife Sylvia to reach out and post updates as Scott recuperates.</p>
 
@@ -8,13 +8,13 @@
 	</section>
 </article>
 <section class="pure-g-r">
-	
+
 	<% @entries.each do |entry| %>
 	<article class="pure-u-2-3">
 		<section>
 			<h2><%= link_to entry.title, entry %></h2>
 			<time datetime="<%= entry.created_at.to_formatted_s(:unambiguous) %>"><%= entry.created_at.to_formatted_s(:short_date_only) %></time>
-			<p><%= HTMLEntities.new.decode ActionView::Base.full_sanitizer.sanitize(entry.content, :tags=>[]).split[0..50].join(' ') %>&hellip;<%= link_to "continue", entry %></p>		
+			<p><%= HTMLEntities.new.decode ActionView::Base.full_sanitizer.sanitize(entry.content, :tags=>[]).split[0..50].join(' ') %>&hellip;<%= link_to "continue", entry %></p>
 		</section>
 	</article>
 	<% end %>
