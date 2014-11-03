@@ -4,6 +4,8 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  config.action_mailer.default_url_options = { host: "www.scottunderhill.org" }
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -18,7 +20,7 @@ Rails.application.configure do
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
-  
+
   # If you are deploying on Heroku with Rails 3.2 only, forcing your application to not access the DB
   # or load models when precompiling your assets.
   # this is also acheived through the use of the gem:
