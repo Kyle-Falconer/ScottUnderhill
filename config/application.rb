@@ -26,8 +26,8 @@ module Scottunderhill
       address:              'smtp.gmail.com',
       port:                 587,
       domain:               'scottunderhill.org',
-      user_name:            '<%= ENV["GMAIL_SEND_EMAIL_ADDRESS"] %>',
-      password:             '<%= ENV["GMAIL_PASSWORD"] %>',
+      user_name:            ENV["GMAIL_SEND_EMAIL_ADDRESS"],
+      password:             ENV["GMAIL_PASSWORD"],
       authentication:       'plain',
       enable_starttls_auto: true  }
   end
